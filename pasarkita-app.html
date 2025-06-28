@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasarKita | Marketplace Produk Wirausaha Lokal</title>
+    <base target="_self">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10B981',
+                        secondary: '#F59E0B',
+                        accent: '#3B82F6',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center" onclick="navigate(event, 'home')">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                            <i class="fas fa-store text-white text-lg"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-bold text-gray-900">PasarKita</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-gray-700 hover:text-primary transition-all font-medium" onclick="navigate(event, 'home')">Beranda</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-all font-medium" onclick="navigate(event, 'products')">Produk</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-all font-medium" onclick="navigate(event, 'sellers')">Pelapak</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-all font-medium" onclick="navigate(event, 'about')">Tentang</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative hidden md:block">
+                        <input type="text" placeholder="Cari produk..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
